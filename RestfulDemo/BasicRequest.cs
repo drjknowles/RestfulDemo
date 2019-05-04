@@ -17,6 +17,7 @@
 
             var client = new RestClient(restClientUri);
             var request = new RestRequest(restRequestContent, Method.GET, DataFormat.Json);
+
             var responseData = client.Execute<List<Release>>(request, Method.GET);
 
             foreach (var release in responseData.Data)
